@@ -4,6 +4,10 @@ lint:
 test:
 	docker compose exec app go test main_test.go
 
-ci: lint test
+start: 
+    docker compose up -d
+
+ci: start lint test
+
 
 
