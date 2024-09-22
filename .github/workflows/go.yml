@@ -22,7 +22,7 @@ jobs:
       run: docker compose up -d postgres
 
     - name: Lint
-      uses: golangci/golangci-lint-actions@v6
+      uses: actions/golangci/golangci-lint-actions@v6
       with: 
         version: v1.59
         args: controlers/ database/ models/ routes/
