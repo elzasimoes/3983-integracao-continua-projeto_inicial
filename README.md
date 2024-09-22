@@ -28,8 +28,24 @@ Em resumo, este comando executa o lint na nossa aplicação usando a ferramenta 
 docker run --rm -itv $(pwd):/app -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
 ```
 
-Para prosseguir, vamos executar docker compose up -d para liberar o terminal para outras tarefas. Em seguida, usaremos o comando docker compose exec app, para rodar comandos diretamente no container da aplicação, seguido de go test main_teste.go
+Para prosseguir, vamos executar `docker compose up -d` para liberar o terminal para outras tarefas. Em seguida, usaremos o comando `docker compose exec app`, para rodar comandos diretamente no container da aplicação, seguido de `go test main_teste.go`
 
 ```bash
 docker compose exec app go test main_teste.go
 ```
+
+### Makefile
+
+```bash
+makefile lint
+```
+```bash
+makefile test
+```
+```bash
+makefile start
+```
+```bash
+makefile ci
+```
+
